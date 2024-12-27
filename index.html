@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Kurokami Manhwa API Documentation</title>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-4">
+    <nav class="flex justify-between items-center mb-4">
+      <h1 class="text-4xl font-bold bg-blue-500 text-white p-2">Kurokami Manhwa API Documentation</h1>
+      <ul class="flex space-x-4">
+        <li><a href="https://github.com/ardianta/kurokami-manhwa-api" class="text-blue-500">Github</a></li>
+        <li><a href="https://ardianta.github.io/kurokami-manhwa-api" class="text-blue-500">Documentation</a></li>
+      </ul>
+    </nav>
+    <p class="mb-4">API untuk mengambil data manhwa dari situs web <a href="https://komikstation.co/" class="text-blue-500">Komik Station</a>.</p>
+    
+    <h2 class="text-2xl font-bold mb-2">Endpoints</h2>
+    <ul class="list-disc mb-4 pl-5">
+      <li><a href="/api/manhwa-new" class="text-blue-500">/api/manhwa-new</a> - Daftar manhwa terbaru</li>
+      <li><a href="/api/manhwa-popular" class="text-blue-500">/api/manhwa-popular</a> - Daftar manhwa populer</li>
+      <li><a href="/api/manhwa-recommendation" class="text-blue-500">/api/manhwa-recommendation</a> - Rekomendasi manhwa</li>
+      <li><a href="/api/genres" class="text-blue-500">/api/genres</a> - Daftar genre</li>
+      <li><a href="/api/genre/:genreId" class="text-blue-500">/api/genre/:genreId</a> - Manhwa berdasarkan genre</li>
+      <li><a href="/api/search/:searchId" class="text-blue-500">/api/search/:searchId</a> - Pencarian manhwa</li>
+      <li><a href="/api/manhwa-detail/:manhwaId" class="text-blue-500">/api/manhwa-detail/:manhwaId</a> - Detail manhwa</li>
+      <li><a href="/api/manhwa-ongoing" class="text-blue-500">/api/manhwa-ongoing</a> - Daftar manhwa ongoing</li>
+      <li><a href="/api/chapter/:chapterId" class="text-blue-500">/api/chapter/:chapterId</a> - Baca chapter manhwa</li>
+    </ul>
+    
+    <h2 class="text-2xl font-bold mb-2">Contoh Response</h2>
+    <pre class="bg-gray-200 p-4 rounded">
+      [
+        {
+          "title": "Return of The Greatest Lancer",
+          "link": "https://komikstation.co/manga/return-of-the-greatest-lancer/",
+          "imageSrc": "https://i0.wp.com/komikstation.co/wp-content/uploads/2021/09/Return-of-The-Greatest-Lancer-1.jpg?resize=100,130",
+          "chapters": [
+            {
+              "chapterLink": "https://komikstation.co/return-of-the-greatest-lancer-chapter-151/",
+              "chapterTitle": "Ch.151",
+              "timeAgo": "3 jam lalu"
+            },
+            {
+              "chapterLink": "https://komikstation.co/return-of-the-greatest-lancer-chapter-150/",
+              "chapterTitle": "Ch.150",
+              "timeAgo": "1 minggu lalu"
+            },
+            {
+              "chapterLink": "https://komikstation.co/return-of-the-greatest-lancer-chapter-149/",
+              "chapterTitle": "Ch.149",
+              "timeAgo": "2 minggu lalu"
+            }
+          ]
+        }
+      ]
+    </pre>
+  </div>
+</body>
+</html>

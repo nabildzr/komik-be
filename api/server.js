@@ -6,6 +6,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(cors());
+
 // POPULAR MANHWA
 app.get('/api/manhwa-popular', async (req, res) => {
   try {
